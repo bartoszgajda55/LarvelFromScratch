@@ -12,7 +12,19 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+//    $city = 'Glasgow';
+
+    $tasks = [
+        'Go to the store',
+        'Finish doing something',
+        'Do nothing'
+    ];
+
+//    return view('welcome', [
+//        'name' => 'John',
+//        'city' => $city
+//    ])->with('age', 3);
+    return view('welcome', compact('tasks'));
 });
 
 Route::get('/about', function() {
